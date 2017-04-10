@@ -58,10 +58,21 @@ Remember that a Senior Refucktorer always tests their code, so:
 
 ### Once you are done
 
+Once you feel you've refucktored enough run this command at the root of the project
+
+```bash
+$ git diff >refucks/your-pair-name.patch
+```
+
+Instead of `your-pair-name` choose a suitable, funny name; that command will generate a patch
+so that other people can execute this command
 
 
-Once you are done push your code to `refucks/$firstRefucktorerNickname-$secondRefucktorerNickname`,
-so for me it could be something like `refucks/SirRefucktorALot-AliceInRefucktorLand`.
+```bash
+$ path -p1 <refucks/your-pair-name.patch
+```
+
+and have a look at what improvements you made!
 
 
 ### Disclaimer and thanks
