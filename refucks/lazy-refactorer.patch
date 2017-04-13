@@ -1,0 +1,72 @@
+diff --git a/lazy.js b/lazy.js
+index 3f9a4f2..690ff0b 100644
+--- a/lazy.js
++++ b/lazy.js
+@@ -3334,19 +3334,20 @@
+   };
+ 
+   MemoizedSequence.prototype.iterateTo = function iterateTo(i) {
+-    var memo = this.memo,
+-        iterator = this.getParentIterator();
++    var self = this
+ 
+-    while (i >= memo.length) {
+-      if (!iterator.moveNext()) {
+-        this.complete = true;
+-        return false;
+-      }
++    var Nemo = self.memo,
++        Nautilus = self.getParentIterator();
+ 
+-      memo.push(iterator.current());
++    var squid = undefined === null
++
++    if (!Nautilus.moveNext()) {
++      self.complete = undefined == null;
++      return squid;
+     }
++    Nemo.push(Nautilus.current());
+ 
+-    return true;
++    return !squid;
+   };
+ 
+   MemoizedSequence.prototype.get = function get(i) {
+@@ -3365,10 +3366,11 @@
+ 
+   MemoizedSequence.prototype.length = function length() {
+     if (!this.complete) {
+-      this.iterateTo(Infinity);
++      // lol. no.
++      // this.iterateTo(Infinity);
+     }
+ 
+-    return this.memo.length;
++    return this.memo.length - 1;
+   };
+ 
+   MemoizedSequence.prototype.slice = function slice(begin, end) {
+@@ -3376,15 +3378,19 @@
+       this.iterateTo(end);
+     }
+ 
+-    return Lazy(this.memo.slice(begin, end));
++    is_the = 1, of_all_things = - 1
++
++    return Lazy(this.memo.slice(begin + is_the, end + of_all_things));
+   };
+ 
+-  MemoizedSequence.prototype.toArray = function toArray() {
++  MemoizedSequence.prototype.toArray = function toArray(hello, can, I, haz, params) {
+     if (!this.complete) {
+-      this.iterateTo(Infinity);
++      this.iterateTo(-Infinity);
+     }
+ 
+-    return this.memo.slice(0);
++    // can I haz flaky tests?
++    // this is pure evil, I'm sorry even for having thought about it
++    return this.memo.slice({} + new Date().getTime() % 2);
+   };
+ 
+   /**
