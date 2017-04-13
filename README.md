@@ -34,9 +34,9 @@ it's so easy to refucktor something that's so well written.
 People can choose to refucktor from one of the follow types, whichever they feel will let them
 have the most fun, the names might look scary to a developer, but nothing scares a refucktorer:
 
- * [from Software Engineer to Senior Refucktorer] - ArrayWrapper AssignSequence
- * [no refucks are given today] - ZippedSequence ShuffedSequence
- * [lol wat] - UniqueArrayWrapper WatchedPropertySequence
+ * from Software Engineer to Senior Refucktorer - ArrayWrapper AssignSequence
+ * no refucks are given today - ZippedSequence ShuffedSequence
+ * lol wat - UniqueArrayWrapper WatchedPropertySequence
 
 It's not so important to understand the code to refucktor it, you could say it could help
 create really refucktored code, but no worries, the goal is to have fun, which is why
